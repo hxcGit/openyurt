@@ -68,8 +68,8 @@ func DeployYurtAppManager(
 		return err
 	}
 
-	// 1.2 uniteddeployment
-	if err := CreateCRDFromYaml(client, yurtAppManagerClient, "", []byte(constants.YurtAppManagerUnitedDeployment)); err != nil {
+	// 1.2 yurtappset
+	if err := CreateCRDFromYaml(client, yurtAppManagerClient, "", []byte(constants.YurtAppManagerYurtAppSet)); err != nil {
 		return err
 	}
 
